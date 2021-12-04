@@ -36,12 +36,18 @@ jobs:
           go-version: ${{ matrix.go-version }}
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - name: Cache go modules
+        uses: actions/cache@v2
         with:
-          path: ~/go/pkg/mod
-          key: ${{ runner.os }}-${{ matrix.go-version }}-go-${{ hashFiles('**/go.sum') }}
+          path: |
+            ~/go/pkg/mod
+            ~/.cache/go-build
+            ~/Library/Caches/go-build
+            %LocalAppData%\go-build
+          key: ${{ runner.os }}-${{ matrix.go-version }}-go-ci-${{ hashFiles('**/go.sum') }}
           restore-keys: |
-            ${{ runner.os }}-go-
+            ${{ runner.os }}-${{ matrix.go-version }}-go
+            
       - name: go vet
         run: go vet ./...
       - name: go build
@@ -60,11 +66,25 @@ jobs:
           go-version: ${{ matrix.go-version }}
       - name: Checkout code
         uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - name: Cache go modules
+        uses: actions/cache@v2
         with:
-          path: ~/go/pkg/mod
-          key: ${{ runner.os }}-${{ matrix.go-version }}-go-${{ hashFiles('**/go.sum') }}
+          path: |
+            ~/go/pkg/mod
+            ~/.cache/go-build
+            ~/Library/Caches/go-build
+            %LocalAppData%\go-build
+          key: ${{ runner.os }}-${{ matrix.go-version }}-go-ci-${{ hashFiles('**/go.sum') }}
           restore-keys: |
-            ${{ runner.os }}-go-
-      - name: go test
-        run: go test -v ./...
+            ${{ runner.os }}-${{ matrix.go-version }}-go
+            
+      - name: Unit test
+        run: |
+          go test -v -race -coverprofile=coverage -covermode=atomic ./...
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          files: ./coverage
+          flags: unittests
+          verbose: true
