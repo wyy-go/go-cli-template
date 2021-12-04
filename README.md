@@ -4,6 +4,9 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/wyy-go/go-cli-template/total)
 ![GitHub CI Status](https://img.shields.io/github/workflow/status/wyy-go/go-cli-template/ci?label=CI)
 ![GitHub Release Status](https://img.shields.io/github/workflow/status/wyy-go/go-cli-template/Release?label=release)
+[![GoDoc](https://godoc.org/github.com/things-labs/cicd-go-template?status.svg)](https://godoc.org/github.com/things-labs/cicd-go-template)
+[![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white)](https://pkg.go.dev/github.com/things-labs/cicd-go-template?tab=doc)
+[![codecov](https://codecov.io/gh/things-labs/cicd-go-template/branch/main/graph/badge.svg)](https://codecov.io/gh/things-labs/cicd-go-template)
 
 # go-cli-template
 This is template that help you to quick implement some CLI using Go.
