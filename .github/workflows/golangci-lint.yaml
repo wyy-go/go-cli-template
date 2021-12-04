@@ -4,10 +4,10 @@ on:
     branches:
       - main
     paths-ignore:
-      - '**.md'
+      - '*.md'
   pull_request:
     paths-ignore:
-      - '**.md'
+      - '*.md'
 jobs:
   golangci:
     strategy:
@@ -22,4 +22,4 @@ jobs:
         uses: golangci/golangci-lint-action@v2
         with:
           #version: v1.29
-          args: -E goimports -E gocritic -E misspell -E revive
+          #args: -E goimports -E gocritic -E misspell -E revive
