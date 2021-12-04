@@ -49,8 +49,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ matrix.go-version }}-go
             
-      - name: go vet
-        run: go vet ./...
+      - name: go tool vet
+        run: go tool vet ./...
       - name: go build
         run: go build
   test:
