@@ -4,10 +4,14 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'README.md'
+      - '**.md'
   pull_request:
     paths-ignore:
-      - 'README.md'
+      - '**.md'
+env:
+  GO111MODULE: on
+  GOPROXY: "https://proxy.golang.org"
+  
 jobs:
   test:
     strategy:

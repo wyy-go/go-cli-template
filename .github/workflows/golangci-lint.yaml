@@ -4,10 +4,10 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'README.md'
+      - '**.md'
   pull_request:
     paths-ignore:
-      - 'README.md'
+      - '**.md'
 jobs:
   golangci:
     strategy:
