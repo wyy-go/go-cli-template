@@ -20,6 +20,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
-        with:
+        #with:
           #version: v1.29
           #args: -E goimports -E gocritic -E misspell -E revive
