@@ -22,6 +22,7 @@ jobs:
         uses: golangci/golangci-lint-action@v2
         with:
           version: v1.29
+          args: -E goimports -E gocritic -E misspell -E revive
   lint:
     strategy:
       matrix:
@@ -44,7 +45,7 @@ jobs:
             ~/.cache/go-build
             ~/Library/Caches/go-build
             %LocalAppData%\go-build
-          key: ${{ runner.os }}-${{ matrix.go-version }}-go-ci-${{ hashFiles('**/go.sum') }}
+          key: ${{ runner.os }}-${{ matrix.go-version }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-${{ matrix.go-version }}-go
             
@@ -74,7 +75,7 @@ jobs:
             ~/.cache/go-build
             ~/Library/Caches/go-build
             %LocalAppData%\go-build
-          key: ${{ runner.os }}-${{ matrix.go-version }}-go-ci-${{ hashFiles('**/go.sum') }}
+          key: ${{ runner.os }}-${{ matrix.go-version }}-go-${{ hashFiles('**/go.sum') }}
           restore-keys: |
             ${{ runner.os }}-${{ matrix.go-version }}-go
             
