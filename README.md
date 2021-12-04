@@ -25,3 +25,8 @@ This repository is contains following.
 
 ## Author
 wyy-go
+
+## References
+
+- [go-cli-template](https://github.com/skanehira/go-cli-template)
+
