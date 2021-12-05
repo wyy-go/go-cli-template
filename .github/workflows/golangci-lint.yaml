@@ -21,6 +21,6 @@ jobs:
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v2
         #https://golangci-lint.run/usage/linters/
-        #with:
-          #version: v1.29
-          #args: -E goimports -E gocritic -E misspell -E revive
+        with:
+          version: v1.43.0
+          args: --verbose --disable-all -E errcheck -E goimports -E gocritic -E misspell -E revive
