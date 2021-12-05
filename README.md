@@ -15,7 +15,7 @@ This repository is contains following.
 
 - minimal CLI implementation using [spf13/cobra](https://github.com/spf13/cobra)
 - CI/CD
-  - golangci-lint
+  - [golangci-lint](https://golangci-lint.run/usage/linters/)
   - go test
   - goreleaser
   - dependabot for github-actions and Go
