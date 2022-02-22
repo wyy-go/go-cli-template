@@ -23,4 +23,5 @@ jobs:
         #https://golangci-lint.run/usage/linters/
         with:
           version: v1.43.0
-          args: --verbose --disable-all -E errcheck -E goimports -E gocritic -E misspell -E revive
+          args: --verbose --disable-all -E misspell #-E errcheck -E revive -E gocritic -E goimports
+          #args: --verbose --disable-all -E errcheck -E goimports -E gocritic -E misspell -E revive
