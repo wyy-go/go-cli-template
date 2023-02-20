@@ -1,12 +1,10 @@
-![GitHub Repo stars](https://img.shields.io/github/stars/wyy-go/go-cli-template?style=social)
-![GitHub](https://img.shields.io/github/license/wyy-go/go-cli-template)
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/wyy-go/go-cli-template)
-![GitHub all releases](https://img.shields.io/github/downloads/wyy-go/go-cli-template/total)
-![GitHub CI Status](https://img.shields.io/github/workflow/status/wyy-go/go-cli-template/ci?label=CI)
-![GitHub Release Status](https://img.shields.io/github/workflow/status/wyy-go/go-cli-template/Release?label=release)
-[![Go Report Card](https://goreportcard.com/badge/github.com/wyy-go/go-cli-template)](https://goreportcard.com/report/github.com/wyy-go/go-cli-template)
+[![GoDoc](https://godoc.org/github.com/wyy-go/go-cli-template?status.svg)](https://godoc.org/github.com/wyy-go/go-cli-template)
 [![Go.Dev reference](https://img.shields.io/badge/go.dev-reference-blue?logo=go&logoColor=white)](https://pkg.go.dev/github.com/wyy-go/go-cli-template?tab=doc)
 [![codecov](https://codecov.io/gh/wyy-go/go-cli-template/branch/main/graph/badge.svg)](https://codecov.io/gh/wyy-go/go-cli-template)
+[![Tests](https://github.com/wyy-go/go-cli-template/actions/workflows/ci.yml/badge.svg)](https://github.com/wyy-go/go-cli-template/actions/workflows/ci.yml)
+[![Go Report Card](https://goreportcard.com/badge/github.com/wyy-go/go-cli-template)](https://goreportcard.com/report/github.com/wyy-go/go-cli-template)
+[![Licence](https://img.shields.io/github/license/wyy-go/go-cli-template)](https://raw.githubusercontent.com/wyy-go/go-cli-template/main/LICENSE)
+[![Tag](https://img.shields.io/github/v/tag/wyy-go/go-cli-template)](https://github.com/wyy-go/go-cli-template/tags)
 
 # go-cli-template
 This is template that help you to quick implement some CLI using Go.
